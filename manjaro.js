@@ -1,0 +1,1 @@
+const manjaro = true
