@@ -1,0 +1,10 @@
+CREATE DATABASE nba_players
+
+USE nba_players
+
+CREATE TABLE player (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  height INT NOT NULL,
+  birthday DATE NOT NULL
+)

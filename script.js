@@ -59,7 +59,7 @@ async function editPlayer({ id, name, height, birthday }) {
 	const formatDate = `${slicedDate[2]}-${slicedDate[1]}-${slicedDate[0]}`;
 
 	editForm.innerHTML = `
-  <form>
+  <form onsubmit="return false">
   <div class="form-group">
     <div class="my-4">
       <label for="name">Nome</label>
@@ -74,7 +74,7 @@ async function editPlayer({ id, name, height, birthday }) {
       <input class="form-control" value="${formatDate}" type="date" name="editBirthday" id="editBirthday"
         placeholder="Data de nascimento" />
     </div>
-    <button type="submit" onclick="submitEditPlayer()">Editar</button>
+    <button type="submit" onclick="submitEditPlayer(${id})">Editar</button>
   </div>
 </form>
   `;
